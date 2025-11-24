@@ -1,8 +1,6 @@
-// src/App.jsx
 
 import ImageCard from './ImageCard';
 
-// (Step 6) Create your array of image objects
 const images = [
   {
     id: 1,
@@ -55,13 +53,12 @@ const images = [
 ];
 
 function App() {
-  // (Step 7) Inline style for the 3-column grid
   const galleryStyle = {
     display: 'grid',
-    gridTemplateColumns: 'repeat(3, 1fr)', // 3 equal columns
-    gap: '16px',                            // Space between cards
+    gridTemplateColumns: 'repeat(3, 1fr)', 
+    gap: '16px',                           
     padding: '20px',
-    backgroundColor: '#f0f2f5'              // Light gray background like the demo
+    backgroundColor: '#f0f2f5'          
   };
 
   const headingStyle = {
@@ -72,13 +69,12 @@ function App() {
 
   return (
     <div>
-      <h1 style={headingStyle}>Image Gallery</h1> {/* Added a title like the demo */}
+      <h1 style={headingStyle}>Image Gallery</h1> 
 
       <div style={galleryStyle}>
-        {/* (Step 7) Loop through the images array */}
         {images.map(image => (
           <ImageCard
-            key={image.id} // <-- React needs a unique key for lists
+            key={image.id} 
             url={image.url}
             title={image.title}
             description={image.description}
